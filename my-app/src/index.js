@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
 // import App from './App';
-import Counter from './components/Counter';
+// import Counter from './components/Counter';
 // import ManyProps from './components/ManyProps';
 // import ClickIncrement from './components/ClickIncrement';
 // import FClickIncrement from './components/FClickIncrement';
@@ -10,14 +10,26 @@ import Counter from './components/Counter';
 // import ContactManager from './components/ContactManager';
 // import ReduxIncrementManager from './components/ReduxIncrementManager';
 // import ReduxContactManager from './components/ReduxContactManager';
+import Stopwatch from './components/Stopwatch';
 import * as serviceWorker from './serviceWorker';
 
-var counter = 0;
-function show() {
-  counter++;
-  ReactDOM.render(<Counter counter={counter}/>, document.getElementById('counter'));
+// var counter = 0;
+// function show() {
+//   counter++;
+//   ReactDOM.render(<Counter counter={counter}/>, document.getElementById('counter'));
+// }
+// setInterval(show, 1000);
+
+const obj = {};
+Object.defineProperties(obj, {
+    counter: { value: 0, writable: true }, 
+    isOn: { value: false, writable: true }
+  }
+);
+function Show() {
+  ReactDOM.render(<Stopwatch obj={obj}/>, document.getElementById('root'));
 }
-setInterval(show, 1000);
+setInterval(Show, 1000);
 // ReactDOM.render(<ManyProps/>, document.getElementById('manyprops'));
 // ReactDOM.render(<ClickIncrement/>, document.getElementById('clickincrement'));
 // ReactDOM.render(<FClickIncrement/>, document.getElementById('fclickincrement'));
