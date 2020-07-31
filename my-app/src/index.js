@@ -19,17 +19,6 @@ import * as serviceWorker from './serviceWorker';
 //   ReactDOM.render(<Counter counter={counter}/>, document.getElementById('counter'));
 // }
 // setInterval(show, 1000);
-
-const obj = {};
-Object.defineProperties(obj, {
-    counter: { value: 0, writable: true }, 
-    isOn: { value: false, writable: true }
-  }
-);
-function Show() {
-  ReactDOM.render(<Stopwatch obj={obj}/>, document.getElementById('root'));
-}
-setInterval(Show, 1000);
 // ReactDOM.render(<ManyProps/>, document.getElementById('manyprops'));
 // ReactDOM.render(<ClickIncrement/>, document.getElementById('clickincrement'));
 // ReactDOM.render(<FClickIncrement/>, document.getElementById('fclickincrement'));
@@ -37,7 +26,16 @@ setInterval(Show, 1000);
 // ReactDOM.render(<ContactManager/>, document.getElementById('contactmanager'));
 // ReactDOM.render(<ReduxIncrementManager/>, document.getElementById('reduxincrement'));
 // ReactDOM.render(<ReduxContactManager/>, document.getElementById('reduxcontactmanager'));
-
+const obj = {};
+Object.defineProperties(obj, {
+    counter: { value: 0, writable: true }, 
+    isOn: { value: false, writable: true }
+  }
+);
+function Show() {
+  ReactDOM.render(<Stopwatch obj={obj}/>, document.getElementById('stopwatch'));
+}
+setInterval(Show, 1000);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
