@@ -3,9 +3,12 @@ import React from 'react';
 function Stopwatch(props) {
     if (props.obj.isOn) {
         props.obj.counter++;
+        var hours = Math.floor(props.obj.counter / 3600);
+        var mins = Math.floor((props.obj.counter - (hours * 3600)) / 60);
+        var secs = (props.obj.counter - (hours * 3600)) % 60;
         return(
             <div>
-                <h1>Time: {props.obj.counter} s</h1>
+                <h1>Time: {hours < 10 ? "0" + hours : hours}:{mins < 10 ? "0" + mins : mins}:{secs < 10 ? "0" + secs : secs} </h1>
                 <button onClick={() => {props.obj.isOn = false}}>Stop</button>
                 <button onClick={() => {props.obj.counter = 0; props.obj.isOn = false}}>Reset</button>
             </div>
@@ -13,9 +16,12 @@ function Stopwatch(props) {
     }
     else 
     {
+        hours = Math.floor(props.obj.counter / 3600);
+        mins = Math.floor((props.obj.counter - (hours * 3600)) / 60);
+        secs = (props.obj.counter - (hours * 3600)) % 60;
         return(
             <div>
-                <h1>Time: {props.obj.counter} s</h1>
+                <h1>Time: {hours < 10 ? "0" + hours : hours}:{mins < 10 ? "0" + mins : mins}:{secs < 10 ? "0" + secs : secs} </h1>
                 <button onClick={() => {props.obj.isOn = true}}>Start</button>
                 <button onClick={() => {props.obj.counter = 0}}>Reset</button>
             </div>
