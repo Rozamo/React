@@ -1,0 +1,36 @@
+.major.major { 
+    font-size : 13px;
+}
+.buttons { 
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.buttons button { 
+    width: 100%;
+    height: 40px;
+    font-size : 20px;
+}
+.container {
+    height: 100%;
+    width: 25%;
+    background-color: white;
+    margin: 0 auto;
+}
+.result {
+    width: 96.6%;
+    height: 40px;
+    font-size : 25px;
+    background-color: #CCCCCC;
+    margin: auto;
+    display: block;
+    text-align: right; 
+    border-width: 1px;
+    margin: 0 auto;
+}
+input { 
+    text-align: right; 
+    border-width: 1px;
+    margin: 0 auto;
+    padding-right: 5px;
+}
